@@ -3,12 +3,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="wen.testbywen.MainActivity">
+    tools:context="wen.testbywen.MainActivity"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_test"
+    <ImageView
+        android:id="@+id/iv_test_animation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:src="@drawable/test_image"
+        android:onClick="onClickTest"/>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="启动双进程保活"/>
+        android:orientation="horizontal"
+        android:layout_below="@id/iv_test_animation"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="show"
+            android:onClick="onClickShow"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hide"
+            android:onClick="onClickHide"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
