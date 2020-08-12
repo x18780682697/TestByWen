@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import java.io.IOException;
 
+import wen.test.animation.Main2Activity;
 import wen.testbywen.aidl.Guard;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,38 +26,14 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.btn_test).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_test_launch_animation).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startService(new Intent(getApplicationContext(), LocalService.class));
-                startService(new Intent(getApplicationContext(), RemoteService.class));
-                Toast.makeText(getApplicationContext(), "后台服务已经启动", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(v.getContext(), Main2Activity.class));
             }
         });
 
-        findViewById(R.id.btn_test_set_wallpaper).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    WallpaperManager wpm = (WallpaperManager) getSystemService(
-                            Context.WALLPAPER_SERVICE);
-
-                    if (wpm != null) {
-//                        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.test_pic);
-                        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.test_pic_2);
-                        if (bitmap == null){
-                            Log.i(TAG, "bitmap is null");
-                            return;
-                        }
-//                        wpm.setBitmap(bitmap);
-                        wpm.setBitmap(bitmap, null, true, WallpaperManager.FLAG_SYSTEM);
-                        Log.i(TAG, "wallpaper not null");
-                    }
-                } catch (IOException e) {
-                    Log.e(TAG, "Failed to set wallpaper: " + e);
-                }
-            }
-        });
+        Log.e("MainActivity", "taskId: " + getTaskId());
 
     }
 }

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="wen.testbywen">
-
-<!--    修改壁纸权限-->
-    <uses-permission android:name = "android.permission.SET_WALLPAPER"/>
+    <!-- 修改壁纸权限 -->
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
 
     <application
         android:allowBackup="true"
@@ -12,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name="wen.test.animation.Main2Activity" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,8 +23,9 @@
         </activity>
 
         <service android:name=".LocalService" />
-        <service android:name=".RemoteService" android:process=":remote"/>
-
+        <service
+            android:name=".RemoteService"
+            android:process=":remote" />
     </application>
 
 </manifest>
