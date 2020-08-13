@@ -14,7 +14,6 @@ import android.widget.Toast;
 import java.io.IOException;
 
 import wen.test.animation.Main2Activity;
-import wen.testbywen.aidl.Guard;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+//        overridePendingTransition(R.anim.enter, R.anim.still);
+
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
@@ -33,7 +35,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Log.e("MainActivity", "taskId: " + getTaskId());
-
     }
+
+//    @Override
+//    public void finish() {
+//
+//        super.finish();
+//
+////        overridePendingTransition(R.anim.still, R.anim.exit);
+//
+//    }
+
 }

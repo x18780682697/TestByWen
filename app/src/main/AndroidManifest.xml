@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="wen.test.animation.Main2Activity" />
+        <activity android:name="wen.test.animation.Main2Activity"/>
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -23,9 +23,10 @@
         </activity>
 
         <service android:name=".LocalService" />
-        <service
-            android:name=".RemoteService"
+
+        <service android:name=".RemoteService"
             android:process=":remote" />
+
     </application>
 
 </manifest>

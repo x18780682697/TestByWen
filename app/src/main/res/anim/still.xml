@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--平移动画标签-->
-<translate xmlns:android="http://schemas.android.com/apk/res/android"
-    android:fromXDelta="0%p"
-    android:toXDelta="0%p"
-    android:duration="2000"/>
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromAlpha="1"
+    android:toAlpha="1"
+    android:duration="0"/>

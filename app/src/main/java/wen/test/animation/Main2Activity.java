@@ -19,7 +19,7 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        overridePendingTransition(R.anim.enter, R.anim.still);
+//        overridePendingTransition(R.anim.enter, R.anim.still);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
@@ -27,20 +27,18 @@ public class Main2Activity extends AppCompatActivity {
         findViewById(R.id.btn_test).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), MainActivity.class));
+                finish();
             }
         });
-
-        Log.e("Main2Activity", "taskId: " + getTaskId());
-
     }
 
-    @Override
-    public void finish() {
+//    @Override
+//    public void finish() {
+//
+//        super.finish();
+//
+////        overridePendingTransition(R.anim.still, R.anim.exit);
+//
+//    }
 
-        super.finish();
-
-        overridePendingTransition(R.anim.still, R.anim.exit);
-
-    }
 }

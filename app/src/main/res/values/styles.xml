@@ -6,6 +6,16 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/ActivitySwitchAnimation</item>
+    </style>
+
+    <!-- Activity进打开和关闭动画 -->
+    <!-- 在华为nova3i上theme中定义的动画无效，需要使用overridePendingTransition进行定义-->
+    <style name="ActivitySwitchAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/still</item>
+        <item name="android:activityCloseEnterAnimation">@anim/still</item>
+        <item name="android:activityCloseExitAnimation">@anim/exit</item>
     </style>
 
 </resources>
