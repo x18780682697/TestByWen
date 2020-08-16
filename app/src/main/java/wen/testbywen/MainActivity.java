@@ -1,5 +1,6 @@
 package wen.testbywen;
 
+import android.app.ActivityOptions;
 import android.app.WallpaperManager;
 import android.content.Context;
 import android.content.Intent;
@@ -7,7 +8,11 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Slide;
+import android.transition.Transition;
+import android.transition.Visibility;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
@@ -15,6 +20,7 @@ import android.widget.Toast;
 import java.io.IOException;
 
 import wen.test.animation.Main2Activity;
+import wen.test.animation.Main3Activity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +40,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(v.getContext(), Main2Activity.class));
+            }
+        });
+
+        // 测试启动动画2
+        findViewById(R.id.btn_test_launch_animation_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), Main3Activity.class),
+                        ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,
+                                v, "shared_view").toBundle());
             }
         });
 

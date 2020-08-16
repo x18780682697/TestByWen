@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="wen.testbywen.MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@android:color/holo_green_dark">
 
     <ImageView
         android:id="@+id/iv_test_animation"
@@ -42,11 +43,25 @@
         android:layout_height="wrap_content"
         android:text="点击设置壁纸"/>
 
-    <Button
-        android:id="@+id/btn_test_launch_animation"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="点击测试跳转动画"/>
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_test_launch_animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击测试跳转动画"/>
+
+        <Button
+            android:id="@+id/btn_test_launch_animation_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击测试跳转动画2"
+            android:transitionName="shared_view"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
