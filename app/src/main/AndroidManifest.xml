@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name="wen.test.statusbar.Main4Activity" />
         <activity android:name="wen.test.git.TestGitBranchActivity"></activity>
         <activity android:name="wen.test.animation.Main3Activity" />
         <activity android:name="wen.test.animation.Main2Activity" />

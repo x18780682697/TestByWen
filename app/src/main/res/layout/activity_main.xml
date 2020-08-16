@@ -8,6 +8,12 @@
     android:background="@android:color/holo_green_dark">
 
     <Button
+        android:id="@+id/btn_test_change_status_bar_visibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试改变状态栏可见性"/>
+
+    <Button
         android:id="@+id/btn_test_git_branch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

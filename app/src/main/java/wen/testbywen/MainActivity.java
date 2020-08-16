@@ -21,6 +21,7 @@ import java.io.IOException;
 
 import wen.test.animation.Main2Activity;
 import wen.test.animation.Main3Activity;
+import wen.test.statusbar.Main4Activity;
 import wen.test.git.TestGitBranchActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        // 状态栏相关测试
+        findViewById(R.id.btn_test_change_status_bar_visibility).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), Main4Activity.class));
+            }
+        });
 
         // 测试Git分支
         findViewById(R.id.btn_test_git_branch).setOnClickListener(new View.OnClickListener() {
