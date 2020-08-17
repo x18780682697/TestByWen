@@ -21,6 +21,7 @@ import java.io.IOException;
 
 import wen.test.animation.Main2Activity;
 import wen.test.animation.Main3Activity;
+import wen.test.git.TestGitBranchActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        // 测试Git分支
+        findViewById(R.id.btn_test_git_branch).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), TestGitBranchActivity.class));
+            }
+        });
 
         // 测试启动动画
         findViewById(R.id.btn_test_launch_animation).setOnClickListener(new View.OnClickListener() {
