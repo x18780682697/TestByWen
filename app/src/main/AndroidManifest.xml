@@ -13,23 +13,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
+        <activity android:name="wen.test.statusbar.TransparentStatusAndNavigationBarActivity"/>
         <activity android:name="wen.test.fileopen.Main5Activity">
-            <!--过滤条件设定请参考：https://blog.csdn.net/qq_36009027/article/details/94627156-->
+
+            <!-- 过滤条件设定请参考：https://blog.csdn.net/qq_36009027/article/details/94627156 -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <!--过滤条件-->
-                <data android:scheme="file"/>
+                <!-- 过滤条件 -->
+                <data android:scheme="file" />
                 <data android:scheme="content" />
                 <data android:host="*" />
                 <data android:mimeType="*/*" />
-                <data android:pathPattern=".*\\.dwg"/>
+                <data android:pathPattern=".*\\.dwg" />
             </intent-filter>
         </activity>
         <activity android:name="wen.test.statusbar.Main4Activity" />
-        <activity android:name="wen.test.git.TestGitBranchActivity">
-        </activity>
+        <activity android:name="wen.test.git.TestGitBranchActivity"/>
         <activity android:name="wen.test.animation.Main3Activity" />
         <activity android:name="wen.test.animation.Main2Activity" />
         <activity android:name=".MainActivity">

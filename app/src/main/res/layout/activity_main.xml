@@ -5,7 +5,13 @@
     android:layout_height="match_parent"
     tools:context="wen.testbywen.MainActivity"
     android:orientation="vertical"
-    android:background="@android:color/holo_green_dark">
+    android:background="@android:color/white">
+
+    <Button
+        android:id="@+id/btn_test_transparent_status_and_navigation_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="透明状态栏和导航栏"/>
 
     <Button
         android:id="@+id/btn_test_change_status_bar_visibility"

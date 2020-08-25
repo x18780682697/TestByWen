@@ -12,6 +12,7 @@ import wen.test.animation.Main2Activity;
 import wen.test.animation.Main3Activity;
 import wen.test.statusbar.Main4Activity;
 import wen.test.git.TestGitBranchActivity;
+import wen.test.statusbar.TransparentStatusAndNavigationBarActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        // 透明状态栏和导航栏
+        findViewById(R.id.btn_test_transparent_status_and_navigation_bar).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), TransparentStatusAndNavigationBarActivity.class));
+            }
+        });
 
         // 状态栏相关测试
         findViewById(R.id.btn_test_change_status_bar_visibility).setOnClickListener(new View.OnClickListener() {
