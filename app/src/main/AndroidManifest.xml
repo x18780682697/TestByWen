@@ -42,9 +42,9 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".LocalService" />
+        <service android:name="wen.test.appguard.LocalService" />
         <service
-            android:name=".RemoteService"
+            android:name="wen.test.appguard.RemoteService"
             android:process=":remote" />
     </application>
 

@@ -1,4 +1,4 @@
-package wen.testbywen;
+package wen.test.appguard;
 
 
 import android.app.Notification;
@@ -10,6 +10,7 @@ import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.util.Log;
 
+import wen.testbywen.R;
 import wen.testbywen.aidl.Guard;
 
 public class RemoteService extends Service {

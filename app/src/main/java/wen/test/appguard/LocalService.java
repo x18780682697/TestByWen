@@ -1,4 +1,4 @@
-package wen.testbywen;
+package wen.test.appguard;
 
 import android.app.Notification;
 import android.app.Service;
@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.util.Log;
+
+import wen.testbywen.R;
 
 public class LocalService extends Service {
 
