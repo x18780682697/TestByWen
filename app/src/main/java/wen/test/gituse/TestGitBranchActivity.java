@@ -1,5 +1,5 @@
 
-package wen.test.git;
+package wen.test.gituse;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

@@ -11,7 +11,7 @@ import android.view.Window;
 import wen.test.animation.Main2Activity;
 import wen.test.animation.Main3Activity;
 import wen.test.statusbar.Main4Activity;
-import wen.test.git.TestGitBranchActivity;
+import wen.test.gituse.TestGitBranchActivity;
 import wen.test.statusbar.TransparentStatusAndNavigationBarActivity;
 
 public class MainActivity extends AppCompatActivity {
