@@ -13,6 +13,7 @@ import wen.test.animation.Main3Activity;
 import wen.test.statusbar.Main4Activity;
 import wen.test.gituse.TestGitBranchActivity;
 import wen.test.statusbar.TransparentStatusAndNavigationBarActivity;
+import wen.test.textuse.CutTextIntoOneLineActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +27,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+
+        // 长文字缩略显示到一行
+        findViewById(R.id.btn_test_cut_long_text_into_one_line).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), CutTextIntoOneLineActivity.class));
+            }
+        });
 
         // 透明状态栏和导航栏
         findViewById(R.id.btn_test_transparent_status_and_navigation_bar).setOnClickListener(new View.OnClickListener() {

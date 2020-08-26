@@ -8,6 +8,12 @@
     android:background="@android:color/white">
 
     <Button
+        android:id="@+id/btn_test_cut_long_text_into_one_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="长文字缩略显示到一行"/>
+
+    <Button
         android:id="@+id/btn_test_transparent_status_and_navigation_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

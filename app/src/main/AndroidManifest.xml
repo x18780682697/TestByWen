@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name="wen.test.statusbar.TransparentStatusAndNavigationBarActivity"/>
+        <activity android:name="wen.test.textuse.CutTextIntoOneLineActivity"></activity>
+        <activity android:name="wen.test.statusbar.TransparentStatusAndNavigationBarActivity" />
         <activity android:name="wen.test.fileopen.Main5Activity">
 
             <!-- 过滤条件设定请参考：https://blog.csdn.net/qq_36009027/article/details/94627156 -->
@@ -31,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity android:name="wen.test.statusbar.Main4Activity" />
-        <activity android:name="wen.test.gituse.TestGitBranchActivity"/>
+        <activity android:name="wen.test.gituse.TestGitBranchActivity" />
         <activity android:name="wen.test.animation.Main3Activity" />
         <activity android:name="wen.test.animation.Main2Activity" />
         <activity android:name=".MainActivity">
