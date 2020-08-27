@@ -35,7 +35,7 @@ public class CutTextIntoOneLineActivity extends AppCompatActivity {
                 String[] testCaseArray = {
                         "12648948439384utsjdfaksdjfhasdf9fwerwedfkjasdhfkasjdhfkajsdhfaskdjhfaskdfjasdjfkl;asdjfasqk.acb",
                         "1264kdfsdjfasqk.acb",
-                        "126484utsjdfaksdjfhasdf9fwerwedfkjdfasdfasdfasdfasdhfkasjdhfk8cb",
+                        "126484utsjdfaksdjfhasdf9fwerwedfkjdfasdfasdfasdfasdhfkasjdhfk8cb.dcox",
                         "12中国人中国人中国人中国人中国人中国人中国人中国人中国人中国人中国人",
                 };
 
@@ -59,7 +59,7 @@ public class CutTextIntoOneLineActivity extends AppCompatActivity {
                     TextView cutTextTv = new TextView(getApplicationContext());
                     cutTextTv.setPaddingRelative(0, 0, 0, 0);
                     cutTextTv.setBackgroundResource(android.R.color.transparent);
-                    cutTextTv.setText(TextDealUtil.cutFileNameIntoOneLine(textView, testCase, "...ext"));
+                    cutTextTv.setText(TextDealUtil.cutFileNameIntoOneLine(textView, testCase, "...", 5));
                     testCaseContainer.addView(cutTextTv, layoutParams);
 
                     View splitView = new View(getApplicationContext());
