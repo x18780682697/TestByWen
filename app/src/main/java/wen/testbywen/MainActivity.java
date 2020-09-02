@@ -10,6 +10,7 @@ import android.view.Window;
 
 import wen.test.animation.Main2Activity;
 import wen.test.animation.Main3Activity;
+import wen.test.loaddex.TestDynamicLoadDexActivity;
 import wen.test.statusbar.Main4Activity;
 import wen.test.gituse.TestGitBranchActivity;
 import wen.test.statusbar.TransparentStatusAndNavigationBarActivity;
@@ -28,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
+
+        // dex动态加载
+        findViewById(R.id.btn_test_dynamic_load_dex).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), TestDynamicLoadDexActivity.class));
+            }
+        });
 
         // 长文字缩略显示到一行
         findViewById(R.id.btn_test_cut_long_text_into_one_line).setOnClickListener(new View.OnClickListener() {

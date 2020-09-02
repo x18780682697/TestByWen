@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':dynamic_load_dex', ':dynamic_load_dex_fake_app', ':dyncmic_load_dex_interface'

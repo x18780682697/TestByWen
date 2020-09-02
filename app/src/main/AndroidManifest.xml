@@ -2,8 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="wen.testbywen">
+
     <!-- 修改壁纸权限 -->
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <!-- 读写外置存储-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name="wen.test.textuse.CutTextIntoOneLineActivity"></activity>
+
+        <activity android:name="wen.test.loaddex.TestDynamicLoadDexActivity"/>
+        <activity android:name="wen.test.textuse.CutTextIntoOneLineActivity" />
         <activity android:name="wen.test.statusbar.TransparentStatusAndNavigationBarActivity" />
         <activity android:name="wen.test.fileopen.Main5Activity">
 
