@@ -32,18 +32,20 @@ public class TestDynamicLoadDexActivity extends AppCompatActivity {
     }
 
     private DynamicLoadClassInterface tryLoadDex() {
-        String installDir = Environment.getExternalStorageDirectory().getPath() + "/0files";
-        String dexpath = installDir + "/classes.dex";
-        DexClassLoader dexClassLoader = new DexClassLoader(dexpath, dexpath, installDir,
+        String dexInstallDir = Environment.getExternalStorageDirectory().getPath() + "/0files";
+        String dexPath = dexInstallDir + "/classes.dex";
+        DexClassLoader dexClassLoader = new DexClassLoader(dexPath, dexPath, dexInstallDir,
                 getApplicationContext().getClassLoader());
-        Class testClass = null;
+        Class<?> testClass = null;
         try {
             testClass = dexClassLoader.loadClass("wen.test.dex.DynamicLoadClassForTest");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
         try {
-            return (DynamicLoadClassInterface)testClass.newInstance();
+            if (testClass != null) {
+                return (DynamicLoadClassInterface)testClass.newInstance();
+            }
         } catch (IllegalAccessException | InstantiationException e) {
             e.printStackTrace();
         }
