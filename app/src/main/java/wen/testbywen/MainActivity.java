@@ -11,6 +11,7 @@ import android.view.Window;
 import wen.test.animation.Main2Activity;
 import wen.test.animation.Main3Activity;
 import wen.test.loaddex.TestDynamicLoadDexActivity;
+import wen.test.navbar.TestNavigationBarControlActivity;
 import wen.test.statusbar.Main4Activity;
 import wen.test.gituse.TestGitBranchActivity;
 import wen.test.statusbar.TransparentStatusAndNavigationBarActivity;
@@ -29,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
+        // 测试导航栏
+        findViewById(R.id.btn_test_nav_bar).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), TestNavigationBarControlActivity.class));
+            }
+        });
 
         // dex动态加载
         findViewById(R.id.btn_test_dynamic_load_dex).setOnClickListener(new View.OnClickListener() {
