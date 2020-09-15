@@ -1,17 +1,15 @@
 package wen.test.statusbar;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import wen.test.BaseActivity;
 import wen.testbywen.R;
 
-public class TransparentStatusAndNavigationBarActivity extends AppCompatActivity {
+public class TransparentStatusAndNavigationBarActivity extends BaseActivity {
 
     int originStatusColor, originNavigationColor;
     int originVisibility;
@@ -27,12 +25,6 @@ public class TransparentStatusAndNavigationBarActivity extends AppCompatActivity
 //        getWindow().setNavigationBarColor(blackColor);
 
         super.onCreate(savedInstanceState);
-
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null){
-            actionBar.hide();
-        }
 
         setContentView(R.layout.activity_transparent_status_and_navigation_bar);
         originStatusColor = getWindow().getStatusBarColor();

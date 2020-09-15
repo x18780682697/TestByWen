@@ -4,18 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="wen.test.navbar.TestNavigationBarControlActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@android:color/holo_purple">
 
     <Button
-        android:id="@+id/btn_test_set_nav_bar_color_origin"
+        android:id="@+id/btn_test_recovery_nav_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="恢复状态栏为原始颜色"/>
+        android:text="恢复状态栏"
+        android:alpha="1.0"/>
 
     <Button
         android:id="@+id/btn_test_set_nav_bar_color_red"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="设置状态栏为红色"/>
+        android:text="设置导航栏颜色为红色"/>
+
+    <Button
+        android:id="@+id/btn_test_set_nav_bar_transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置透明导航栏"/>
 
 </LinearLayout>
