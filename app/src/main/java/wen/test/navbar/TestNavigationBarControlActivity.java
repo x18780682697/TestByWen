@@ -39,6 +39,8 @@ public class TestNavigationBarControlActivity extends BaseActivity implements Vi
     }
 
     private void setTransParent(){
+        // 布局适配导航栏，不延伸到导航栏
+        findViewById(R.id.root_view).setFitsSystemWindows(true);
         Window window = getWindow();
         View decorView = window.getDecorView();
         int newUiVisibility = decorView.getSystemUiVisibility();
