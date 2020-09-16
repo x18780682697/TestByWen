@@ -8,6 +8,12 @@
     android:background="@android:color/white">
 
     <Button
+        android:id="@+id/btn_test_color_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试Color类"/>
+
+    <Button
         android:id="@+id/btn_test_nav_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

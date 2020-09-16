@@ -10,6 +10,7 @@ import android.view.Window;
 
 import wen.test.animation.Main2Activity;
 import wen.test.animation.Main3Activity;
+import wen.test.coloruse.TestAndroidColorClassActivity;
 import wen.test.loaddex.TestDynamicLoadDexActivity;
 import wen.test.navbar.TestNavigationBarControlActivity;
 import wen.test.statusbar.Main4Activity;
@@ -29,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        // 测试Color类
+        findViewById(R.id.btn_test_color_class).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), TestAndroidColorClassActivity.class));
+            }
+        });
 
         // 测试导航栏
         findViewById(R.id.btn_test_nav_bar).setOnClickListener(new View.OnClickListener() {
