@@ -13,6 +13,7 @@ import wen.test.animation.Main3Activity;
 import wen.test.coloruse.TestAndroidColorClassActivity;
 import wen.test.loaddex.TestDynamicLoadDexActivity;
 import wen.test.navbar.TestNavigationBarControlActivity;
+import wen.test.recycleview.TestItemDeleteAnimationActivity;
 import wen.test.statusbar.Main4Activity;
 import wen.test.gituse.TestGitBranchActivity;
 import wen.test.statusbar.TransparentStatusAndNavigationBarActivity;
@@ -25,11 +26,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-//        overridePendingTransition(R.anim.enter, R.anim.still);
-
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.btn_test_recycler_view_item_animation).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), TestItemDeleteAnimationActivity.class));
+            }
+        });
 
         // 测试Color类
         findViewById(R.id.btn_test_color_class).setOnClickListener(new View.OnClickListener() {

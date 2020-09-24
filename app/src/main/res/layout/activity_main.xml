@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,121 +8,114 @@
     android:orientation="vertical"
     android:background="@android:color/white">
 
-    <Button
-        android:id="@+id/btn_test_color_class"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="测试Color类"/>
-
-    <Button
-        android:id="@+id/btn_test_nav_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="测试导航栏"/>
-
-    <Button
-        android:id="@+id/btn_test_dynamic_load_dex"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="dex动态加载"/>
-
-    <Button
-        android:id="@+id/btn_test_cut_long_text_into_one_line"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="长文字缩略显示到一行"/>
-
-    <Button
-        android:id="@+id/btn_test_transparent_status_and_navigation_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="透明状态栏和导航栏"/>
-
-    <Button
-        android:id="@+id/btn_test_change_status_bar_visibility"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="测试改变状态栏可见性"/>
-
-    <Button
-        android:id="@+id/btn_test_git_branch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="点击测试Git分支"/>
-
-    <ImageView
-        android:id="@+id/iv_test_animation"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:src="@drawable/test_image"
-        android:visibility="gone"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/iv_test_animation"
-        android:layout_centerHorizontal="true">
+        android:orientation="vertical"
+        android:background="@android:color/white">
 
         <Button
+            android:id="@+id/btn_test_recycler_view_item_animation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="show"
-            android:onClick="onClickShow"/>
+            android:text="测试RecyclerView的item动画"/>
 
         <Button
+            android:id="@+id/btn_test_color_class"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="hide"
-            android:onClick="onClickHide"/>
+            android:text="测试Color类"/>
+
+        <Button
+            android:id="@+id/btn_test_nav_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试导航栏"/>
+
+        <Button
+            android:id="@+id/btn_test_dynamic_load_dex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dex动态加载"/>
+
+        <Button
+            android:id="@+id/btn_test_cut_long_text_into_one_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="长文字缩略显示到一行"/>
+
+        <Button
+            android:id="@+id/btn_test_transparent_status_and_navigation_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="透明状态栏和导航栏"/>
+
+        <Button
+            android:id="@+id/btn_test_change_status_bar_visibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试改变状态栏可见性"/>
+
+        <Button
+            android:id="@+id/btn_test_git_branch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击测试Git分支"/>
+
+        <ImageView
+            android:id="@+id/iv_test_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:src="@drawable/test_image"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btn_test_set_wallpaper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击设置壁纸"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_test_launch_animation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击测试跳转动画"/>
+
+            <Button
+                android:id="@+id/btn_test_launch_animation_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击测试跳转动画2"
+                android:transitionName="shared_view"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_test_set_status_bar_icon_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设置状态栏图标为白色" />
+
+            <Button
+                android:id="@+id/btn_test_set_status_bar_icon_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设置状态栏图标为黑色" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_test_set_wallpaper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="点击设置壁纸"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn_test_launch_animation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="点击测试跳转动画"/>
-
-        <Button
-            android:id="@+id/btn_test_launch_animation_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="点击测试跳转动画2"
-            android:transitionName="shared_view"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn_test_set_status_bar_icon_white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="设置状态栏图标为白色" />
-
-        <Button
-            android:id="@+id/btn_test_set_status_bar_icon_black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="设置状态栏图标为黑色" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

@@ -2,11 +2,11 @@ package wen.test;
 
 import android.os.Bundle;
 import android.view.Window;
-import android.view.WindowManager;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+
 
 public class BaseActivity extends AppCompatActivity {
 
