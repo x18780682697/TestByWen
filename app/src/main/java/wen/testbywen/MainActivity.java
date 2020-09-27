@@ -11,6 +11,7 @@ import android.view.Window;
 import wen.test.animation.Main2Activity;
 import wen.test.animation.Main3Activity;
 import wen.test.coloruse.TestAndroidColorClassActivity;
+import wen.test.keyevent.TestListenKeyEvent;
 import wen.test.loaddex.TestDynamicLoadDexActivity;
 import wen.test.navbar.TestNavigationBarControlActivity;
 import wen.test.recycleview.TestItemDeleteAnimationActivity;
@@ -29,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.btn_test_listen_key_code).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), TestListenKeyEvent.class));
+            }
+        });
 
         findViewById(R.id.btn_test_recycler_view_item_animation).setOnClickListener(new View.OnClickListener() {
             @Override

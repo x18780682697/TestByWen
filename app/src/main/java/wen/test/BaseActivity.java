@@ -2,6 +2,7 @@ package wen.test;
 
 import android.os.Bundle;
 import android.view.Window;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -23,4 +24,9 @@ public class BaseActivity extends AppCompatActivity {
         }
 
     }
+
+    protected void toast(String msg){
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+    }
+
 }

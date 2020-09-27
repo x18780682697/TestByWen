@@ -15,6 +15,12 @@
         android:background="@android:color/white">
 
         <Button
+            android:id="@+id/btn_test_listen_key_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试监听按键事件"/>
+
+        <Button
             android:id="@+id/btn_test_recycler_view_item_animation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

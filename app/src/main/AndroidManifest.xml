@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name="wen.test.recycleview.TestItemDeleteAnimationActivity"></activity>
+        <activity android:name="wen.test.keyevent.TestListenKeyEvent"></activity>
+        <activity android:name="wen.test.recycleview.TestItemDeleteAnimationActivity" />
         <activity android:name="wen.test.coloruse.TestAndroidColorClassActivity" />
         <activity android:name="wen.test.navbar.TestNavigationBarControlActivity" />
         <activity android:name="wen.test.loaddex.TestDynamicLoadDexActivity" />
