@@ -8,8 +8,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 
+import wen.test.BaseActivity;
 import wen.test.animation.Main2Activity;
 import wen.test.animation.Main3Activity;
+import wen.test.animation.TestLottieAnimActivity;
 import wen.test.coloruse.TestAndroidColorClassActivity;
 import wen.test.keyevent.TestListenKeyEvent;
 import wen.test.loaddex.TestDynamicLoadDexActivity;
@@ -20,9 +22,28 @@ import wen.test.gituse.TestGitBranchActivity;
 import wen.test.statusbar.TransparentStatusAndNavigationBarActivity;
 import wen.test.textuse.CutTextIntoOneLineActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private final static String TAG = MainActivity.class.getSimpleName();
+
+    @Override
+    public void onClick(View v) {
+        if (v == null){
+            return;
+        }
+        int id  = v.getId();
+        Class targetActivityClass = null;
+        switch (id){
+            case R.id.btn_test_lottie_anim:
+                targetActivityClass = TestLottieAnimActivity.class;
+                break;
+            default:break;
+        }
+        if (targetActivityClass == null){
+            return;
+        }
+        startActivity(new Intent(v.getContext(), targetActivityClass));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

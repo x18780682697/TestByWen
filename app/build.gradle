@@ -32,5 +32,9 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     compileOnly project(path: ':dynamic_load_dex')
     implementation project(path: ':dyncmic_load_dex_interface')
+    // RecyclerView
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    // Lottie动画依赖
+    implementation "com.airbnb.android:lottie:3.4.2"
+
 }
