@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class BaseActivity extends AppCompatActivity {
 
+    public final static String DEFAULT_TAG = "@@@zw";
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 

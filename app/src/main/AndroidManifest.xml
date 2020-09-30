@@ -14,7 +14,26 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name="wen.test.animation.TestLottieAnimActivity"></activity>
+
+        <!--测试三方打开Activity-->
+        <activity android:name="wen.test.thirdcall.TestThirdCallActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:host="*" />
+                <data android:mimeType="*/*" />
+                <!--增加文件后缀名条件-->
+<!--                <data android:pathPattern=".*\\.7z" />-->
+            </intent-filter>
+        </activity>
+
+        <activity android:name="wen.test.animation.TestLottieAnimActivity" />
         <activity android:name="wen.test.keyevent.TestListenKeyEvent" />
         <activity android:name="wen.test.recycleview.TestItemDeleteAnimationActivity" />
         <activity android:name="wen.test.coloruse.TestAndroidColorClassActivity" />
@@ -22,24 +41,8 @@
         <activity android:name="wen.test.loaddex.TestDynamicLoadDexActivity" />
         <activity android:name="wen.test.textuse.CutTextIntoOneLineActivity" />
         <activity android:name="wen.test.statusbar.TransparentStatusAndNavigationBarActivity" />
-        <activity android:name="wen.test.fileopen.Main5Activity">
-
-            <!-- 过滤条件设定请参考：https://blog.csdn.net/qq_36009027/article/details/94627156 -->
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <!-- 过滤条件 -->
-                <data android:scheme="file" />
-                <data android:scheme="content" />
-                <data android:host="*" />
-                <data android:mimeType="*/*" />
-                <data android:pathPattern=".*\\.dwg" />
-            </intent-filter>
-        </activity>
-        <activity android:name="wen.test.statusbar.Main4Activity" />
         <activity android:name="wen.test.gituse.TestGitBranchActivity" />
+        <activity android:name="wen.test.statusbar.Main4Activity" />
         <activity android:name="wen.test.animation.Main3Activity" />
         <activity android:name="wen.test.animation.Main2Activity" />
         <activity android:name=".MainActivity">
