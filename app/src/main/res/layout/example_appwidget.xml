@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--用于widget的布局不能包含非Android SDK的View控件-->
+<!--否则会因为找不到相应View对应的类，导致布局加载失败-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="initial text"/>
+
+</RelativeLayout>
