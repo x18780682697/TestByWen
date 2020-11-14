@@ -11,6 +11,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import wen.test.utils.LogUtils;
 import wen.testbywen.R;
 
 public class ExampleAppWidgetProvider extends AppWidgetProvider
@@ -33,9 +34,34 @@ public class ExampleAppWidgetProvider extends AppWidgetProvider
 
         // 每次 widget 被创建时，对应的将widget的id添加到set中
         for (int appWidgetId : appWidgetIds) {
+            LogUtils.d(TAG, "onUpdate...widget id " + appWidgetId);
             idsSet.add(Integer.valueOf(appWidgetId));
         }
         updateAllAppWidgets(context, AppWidgetManager.getInstance(context), idsSet);
+    }
+
+    @Override
+    public void onDeleted(Context context, int[] appWidgetIds) {
+        super.onDeleted(context, appWidgetIds);
+        Log.d(TAG, "onDeleted(): appWidgetIds.length="+appWidgetIds.length);
+
+        // 每次 widget 被创建时，对应的将widget的id添加到set中
+        for (int appWidgetId : appWidgetIds) {
+            LogUtils.d(TAG, "onDeleted...widget id " + appWidgetId);
+            idsSet.remove(Integer.valueOf(appWidgetId));
+        }
+    }
+
+    @Override
+    public void onEnabled(Context context) {
+        super.onEnabled(context);
+        LogUtils.d(TAG, "onEnabled...");
+    }
+
+    @Override
+    public void onDisabled(Context context) {
+        super.onDisabled(context);
+        LogUtils.d(TAG, "onDisabled...");
     }
 
     // 更新所有的 widget
