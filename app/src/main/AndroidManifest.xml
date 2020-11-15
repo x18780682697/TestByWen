@@ -42,9 +42,9 @@
         <activity android:name="wen.test.textuse.CutTextIntoOneLineActivity" />
         <activity android:name="wen.test.statusbar.TransparentStatusAndNavigationBarActivity" />
         <activity android:name="wen.test.gituse.TestGitBranchActivity" />
-        <activity android:name="wen.test.statusbar.Main4Activity" />
-        <activity android:name="wen.test.animation.Main3Activity" />
-        <activity android:name="wen.test.animation.Main2Activity" />
+        <activity android:name="wen.test.statusbar.TestStatusBarActivity" />
+        <activity android:name="wen.test.animation.TestLaunchAnim2Activity" />
+        <activity android:name="wen.test.animation.TestLaunchAnimActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -11,7 +11,7 @@ import wen.testbywen.R;
  * https://blog.csdn.net/ID19870510/article/details/52886377
  */
 
-public class Main2Activity extends AppCompatActivity {
+public class TestLaunchAnimActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class Main2Activity extends AppCompatActivity {
 //        overridePendingTransition(R.anim.enter, R.anim.still);
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_test_launch_anim);
 
         findViewById(R.id.btn_test).setOnClickListener(new View.OnClickListener() {
             @Override

@@ -14,9 +14,9 @@ import wen.testbywen.R;
  * 更改状态栏可见性，方案参见google官方文档：
  * https://developer.android.google.cn/training/system-ui/status
  */
-public class Main4Activity extends AppCompatActivity {
+public class TestStatusBarActivity extends AppCompatActivity {
 
-    private final static String TAG = Main4Activity.class.getSimpleName();
+    private final static String TAG = TestStatusBarActivity.class.getSimpleName();
     private int mOriginSystemUiState;
 
     @Override

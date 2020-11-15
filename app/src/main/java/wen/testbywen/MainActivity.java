@@ -3,21 +3,20 @@ package wen.testbywen;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 import android.view.Window;
 
 import wen.test.BaseActivity;
-import wen.test.animation.Main2Activity;
-import wen.test.animation.Main3Activity;
+import wen.test.animation.TestLaunchAnimActivity;
+import wen.test.animation.TestLaunchAnim2Activity;
 import wen.test.animation.TestLottieAnimActivity;
 import wen.test.coloruse.TestAndroidColorClassActivity;
 import wen.test.keyevent.TestListenKeyEvent;
 import wen.test.loaddex.TestDynamicLoadDexActivity;
 import wen.test.navbar.TestNavigationBarControlActivity;
 import wen.test.recycleview.TestItemDeleteAnimationActivity;
-import wen.test.statusbar.Main4Activity;
+import wen.test.statusbar.TestStatusBarActivity;
 import wen.test.gituse.TestGitBranchActivity;
 import wen.test.statusbar.TransparentStatusAndNavigationBarActivity;
 import wen.test.textuse.CutTextIntoOneLineActivity;
@@ -110,7 +109,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_test_change_status_bar_visibility).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), Main4Activity.class));
+                startActivity(new Intent(v.getContext(), TestStatusBarActivity.class));
             }
         });
 
@@ -126,7 +125,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_test_launch_animation).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), Main2Activity.class));
+                startActivity(new Intent(v.getContext(), TestLaunchAnimActivity.class));
             }
         });
 
@@ -134,7 +133,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_test_launch_animation_2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), Main3Activity.class),
+                startActivity(new Intent(v.getContext(), TestLaunchAnim2Activity.class),
                         ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,
                                 v, "shared_view").toBundle());
             }

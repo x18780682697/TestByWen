@@ -10,7 +10,7 @@ import android.view.Window;
 
 import wen.testbywen.R;
 
-public class Main3Activity extends AppCompatActivity {
+public class TestLaunchAnim2Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class Main3Activity extends AppCompatActivity {
         Transition returnAnim = new Slide(Gravity.RIGHT).setDuration(3000);
         getWindow().setReturnTransition(returnAnim);
 
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_test_launch_anim_2);
 
     }
 
