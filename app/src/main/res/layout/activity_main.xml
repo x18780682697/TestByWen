@@ -15,6 +15,13 @@
         android:background="@android:color/white">
 
         <Button
+            android:id="@+id/btn_test_copy_file_with_aio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试AIO复制文件"
+            android:onClick="onClick"/>
+
+        <Button
             android:id="@+id/btn_test_lottie_anim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
