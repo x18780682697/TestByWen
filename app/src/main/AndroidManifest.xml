@@ -14,8 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name="wen.test.javaio.TestJavaIoActivity"></activity>
-        <!-- 测试三方打开Activity -->
+        <activity android:name="wen.test.drawable.TestLimitDrawableAreaActivity"></activity>
+        <activity android:name="wen.test.javaio.TestJavaIoActivity" /> <!-- 测试三方打开Activity -->
         <activity
             android:name="wen.test.thirdcall.TestThirdCallActivity"
             android:exported="true">

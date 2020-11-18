@@ -15,6 +15,12 @@
         android:background="@android:color/white">
 
         <Button
+            android:id="@+id/btn_test_limit_drawable_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试限定drawable绘制区域" />
+
+        <Button
             android:id="@+id/btn_test_copy_file_with_aio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

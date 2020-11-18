@@ -12,6 +12,7 @@ import wen.test.animation.TestLaunchAnimActivity;
 import wen.test.animation.TestLaunchAnim2Activity;
 import wen.test.animation.TestLottieAnimActivity;
 import wen.test.coloruse.TestAndroidColorClassActivity;
+import wen.test.drawable.TestLimitDrawableAreaActivity;
 import wen.test.javaio.TestJavaIoActivity;
 import wen.test.keyevent.TestListenKeyEvent;
 import wen.test.loaddex.TestDynamicLoadDexActivity;
@@ -51,6 +52,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.btn_test_limit_drawable_area).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), TestLimitDrawableAreaActivity.class));
+            }
+        });
 
         findViewById(R.id.btn_test_copy_file_with_aio).setOnClickListener(new View.OnClickListener() {
             @Override
