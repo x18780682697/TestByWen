@@ -26,9 +26,38 @@
             </intent-filter>
         </activity>
 
-        <!--三方打开-->
+        <!--APK三方打开-->
+        <activity-alias
+            android:name="com.test.thirdcall.TestApkInstallActivity"
+            android:label="apk installer"
+            android:targetActivity="wen.test.thirdcall.TestThirdCallActivity">
+            <!--按照MIME过滤-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:host="*" />
+                <data android:mimeType="application/vnd.android.package-archive" />
+            </intent-filter>
+            <!--按照后缀名过滤-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:host="*" />
+                <data android:mimeType="*/*" />
+                <data android:pathPattern=".*\\.apk" />
+            </intent-filter>
+        </activity-alias>
+
+        <!--任意类型三方打开-->
         <activity
             android:name="wen.test.thirdcall.TestThirdCallActivity"
+            android:label="third call dealer"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -38,13 +67,11 @@
                 <data android:scheme="content" />
                 <data android:host="*" />
                 <data android:mimeType="*/*" />
-                <!-- 增加文件后缀名条件 -->
-                <!-- <data android:pathPattern=".*\\.7z" /> -->
             </intent-filter>
         </activity>
 
         <activity android:name="wen.test.drawable.TestLimitDrawableAreaActivity"/>
-        <activity android:name="wen.test.javaio.TestJavaIoActivity" /> <!-- 测试三方打开Activity -->
+        <activity android:name="wen.test.javaio.TestJavaIoActivity" />
         <activity android:name="wen.test.animation.TestLottieAnimActivity" />
         <activity android:name="wen.test.keyevent.TestListenKeyEvent" />
         <activity android:name="wen.test.recycleview.TestItemDeleteAnimationActivity" />
