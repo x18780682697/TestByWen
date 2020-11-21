@@ -17,6 +17,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
 
+        <!--设置启动activity-->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,15 +26,14 @@
             </intent-filter>
         </activity>
 
+        <!--三方打开-->
         <activity
             android:name="wen.test.thirdcall.TestThirdCallActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-
                 <data android:scheme="file" />
                 <data android:scheme="content" />
                 <data android:host="*" />
