@@ -2,10 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="wen.testbywen">
-
     <!-- 修改壁纸权限 -->
-    <uses-permission android:name="android.permission.SET_WALLPAPER" />
-    <!-- 读写外置存储 -->
+    <uses-permission android:name="android.permission.SET_WALLPAPER" /> <!-- 读写外置存储 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -16,36 +14,55 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-
-        <!--设置启动activity-->
+        <activity android:name="wen.test.regex.TestRegexActivity"></activity>
+        <!-- 设置启动activity -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> <!-- 任意类型三方打开 -->
+        <activity
+            android:name="wen.test.thirdcall.TestThirdCallActivity"
+            android:exported="true"
+            android:label="third call dealer">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
-        <!--APK三方打开-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:host="*" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity> <!-- APK三方打开 -->
         <activity-alias
             android:name="com.test.thirdcall.TestApkInstallActivity"
             android:label="apk installer"
             android:targetActivity="wen.test.thirdcall.TestThirdCallActivity">
-            <!--按照MIME过滤-->
+
+            <!-- 按照MIME过滤 -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="file" />
                 <data android:scheme="content" />
                 <data android:host="*" />
                 <data android:mimeType="application/vnd.android.package-archive" />
             </intent-filter>
-            <!--按照后缀名过滤-->
+            <!-- 按照后缀名过滤 -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="file" />
                 <data android:scheme="content" />
                 <data android:host="*" />
@@ -54,23 +71,7 @@
             </intent-filter>
         </activity-alias>
 
-        <!--任意类型三方打开-->
-        <activity
-            android:name="wen.test.thirdcall.TestThirdCallActivity"
-            android:label="third call dealer"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="file" />
-                <data android:scheme="content" />
-                <data android:host="*" />
-                <data android:mimeType="*/*" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name="wen.test.drawable.TestLimitDrawableAreaActivity"/>
+        <activity android:name="wen.test.drawable.TestLimitDrawableAreaActivity" />
         <activity android:name="wen.test.javaio.TestJavaIoActivity" />
         <activity android:name="wen.test.animation.TestLottieAnimActivity" />
         <activity android:name="wen.test.keyevent.TestListenKeyEvent" />
@@ -83,22 +84,20 @@
         <activity android:name="wen.test.gituse.TestGitBranchActivity" />
         <activity android:name="wen.test.statusbar.TestStatusBarActivity" />
         <activity android:name="wen.test.animation.TestLaunchAnim2Activity" />
-        <activity android:name="wen.test.animation.TestLaunchAnimActivity" />
-
-        <!--双进程保活-->
+        <activity android:name="wen.test.animation.TestLaunchAnimActivity" /> <!-- 双进程保活 -->
         <service android:name="wen.test.appguard.LocalService" />
-        <service android:name="wen.test.appguard.RemoteService"
-            android:process=":remote" />
-
-        <!-- 声明widget对应的AppWidgetProvider -->
+        <service
+            android:name="wen.test.appguard.RemoteService"
+            android:process=":remote" /> <!-- 声明widget对应的AppWidgetProvider -->
         <receiver android:name="wen.test.widget.ExampleAppWidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
-            <meta-data android:name="android.appwidget.provider"
+
+            <meta-data
+                android:name="android.appwidget.provider"
                 android:resource="@xml/example_appwidget_info" />
         </receiver>
-
     </application>
 
 </manifest>

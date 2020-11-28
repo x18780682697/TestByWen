@@ -1,6 +1,8 @@
 package wen.testbywen;
 
 import android.app.ActivityOptions;
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -18,6 +20,7 @@ import wen.test.keyevent.TestListenKeyEvent;
 import wen.test.loaddex.TestDynamicLoadDexActivity;
 import wen.test.navbar.TestNavigationBarControlActivity;
 import wen.test.recycleview.TestItemDeleteAnimationActivity;
+import wen.test.regex.TestRegexActivity;
 import wen.test.statusbar.TestStatusBarActivity;
 import wen.test.gituse.TestGitBranchActivity;
 import wen.test.statusbar.TransparentStatusAndNavigationBarActivity;
@@ -52,6 +55,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.btn_test_regex).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), TestRegexActivity.class));
+            }
+        });
 
         findViewById(R.id.btn_test_limit_drawable_area).setOnClickListener(new View.OnClickListener() {
             @Override
