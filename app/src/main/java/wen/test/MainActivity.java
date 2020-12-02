@@ -1,4 +1,4 @@
-package wen.testbywen;
+package wen.test;
 
 import android.app.ActivityOptions;
 import android.app.Notification;
@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
-import wen.test.BaseActivity;
 import wen.test.animation.TestLaunchAnimActivity;
 import wen.test.animation.TestLaunchAnim2Activity;
 import wen.test.animation.TestLottieAnimActivity;
@@ -26,6 +25,7 @@ import wen.test.statusbar.TestStatusBarActivity;
 import wen.test.gituse.TestGitBranchActivity;
 import wen.test.statusbar.TransparentStatusAndNavigationBarActivity;
 import wen.test.textuse.CutTextIntoOneLineActivity;
+import wen.testbywen.R;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
