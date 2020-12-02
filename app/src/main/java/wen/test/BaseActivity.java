@@ -8,6 +8,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import wen.test.common.ContextProvider;
+
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -17,6 +19,8 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
+        ContextProvider.sActivityContext = this;
 
         // 隐藏自带的标题栏
         requestWindowFeature(Window.FEATURE_NO_TITLE);
