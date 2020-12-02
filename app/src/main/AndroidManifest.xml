@@ -15,17 +15,16 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity android:name="wen.test.notification.TestShowNotificationActivity"/>
+        <activity android:name="wen.test.regex.TestRegexActivity"/>
         <!-- 设置启动activity -->
         <activity android:name="wen.test.MainActivity">
-        <activity android:name="wen.test.regex.TestRegexActivity"></activity>
-        <!-- 设置启动activity -->
-        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- 任意类型三方打开 -->
+        </activity>
+        <!-- 任意类型三方打开 -->
         <activity
             android:name="wen.test.thirdcall.TestThirdCallActivity"
             android:exported="true"
@@ -41,7 +40,8 @@
                 <data android:host="*" />
                 <data android:mimeType="*/*" />
             </intent-filter>
-        </activity> <!-- APK三方打开 -->
+        </activity>
+        <!-- APK三方打开 -->
         <activity-alias
             android:name="com.test.thirdcall.TestApkInstallActivity"
             android:label="apk installer"
