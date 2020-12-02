@@ -14,6 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
+        <activity android:name="wen.test.notification.TestShowNotificationActivity"/>
+        <!-- 设置启动activity -->
         <activity android:name="wen.test.regex.TestRegexActivity"></activity>
         <!-- 设置启动activity -->
         <activity android:name=".MainActivity">

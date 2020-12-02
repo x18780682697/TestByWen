@@ -19,6 +19,7 @@ import wen.test.javaio.TestJavaIoActivity;
 import wen.test.keyevent.TestListenKeyEvent;
 import wen.test.loaddex.TestDynamicLoadDexActivity;
 import wen.test.navbar.TestNavigationBarControlActivity;
+import wen.test.notification.TestShowNotificationActivity;
 import wen.test.recycleview.TestItemDeleteAnimationActivity;
 import wen.test.regex.TestRegexActivity;
 import wen.test.statusbar.TestStatusBarActivity;
@@ -55,6 +56,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.btn_test_show_notification).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), TestShowNotificationActivity.class));
+            }
+        });
 
         findViewById(R.id.btn_test_regex).setOnClickListener(new View.OnClickListener() {
             @Override
