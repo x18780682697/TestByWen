@@ -29,27 +29,6 @@ import wen.testbywen.R;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
-    private final static String TAG = MainActivity.class.getSimpleName();
-
-    @Override
-    public void onClick(View v) {
-        if (v == null){
-            return;
-        }
-        int id  = v.getId();
-        Class targetActivityClass = null;
-        switch (id){
-            case R.id.btn_test_lottie_anim:
-                targetActivityClass = TestLottieAnimActivity.class;
-                break;
-            default:break;
-        }
-        if (targetActivityClass == null){
-            return;
-        }
-        startActivity(new Intent(v.getContext(), targetActivityClass));
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -191,14 +170,24 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     }
 
-//    @Override
-//    public void finish() {
-//
-//        super.finish();
-//
-////        overridePendingTransition(R.anim.still, R.anim.exit);
-//
-//    }
+    @Override
+    public void onClick(View v) {
+        if (v == null){
+            return;
+        }
+        int id  = v.getId();
+        Class targetActivityClass = null;
+        switch (id){
+            case R.id.btn_test_lottie_anim:
+                targetActivityClass = TestLottieAnimActivity.class;
+                break;
+            default:break;
+        }
+        if (targetActivityClass == null){
+            return;
+        }
+        startActivity(new Intent(v.getContext(), targetActivityClass));
+    }
 
     public void setLightStatusBar(Window window, boolean lightStatusBar) {
         // 设置浅色状态栏时的界面显示
