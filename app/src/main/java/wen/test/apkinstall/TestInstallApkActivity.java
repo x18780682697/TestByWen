@@ -16,7 +16,7 @@ public class TestInstallApkActivity extends BaseActivity {
     }
 
     public void onClickReqSystemInstall(View view) {
-        ApkInstallExecutor.getInstance().install(getTestApkFilePath());
+        ApkInstallExecutor.getInstance().installWithSystemInstaller(getTestApkFilePath());
     }
 
     private String getTestApkFilePath(){
