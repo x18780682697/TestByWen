@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="wen.test.notification.TestNotificationSortActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/default_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送默认通知"
+            android:onClick="onClick"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOTE: 仅8.0及以上可用"/>
+
+        <Button
+            android:id="@+id/important_colorized_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送色彩化的通知"
+            android:onClick="onClick"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOTE: 仅8.0及以上可用"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/high_chn_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送high重要性的通知"
+                android:onClick="onClick"/>
+
+            <Button
+                android:id="@+id/default_chn_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送default重要性的通知"
+                android:onClick="onClick"/>
+
+            <Button
+                android:id="@+id/low_chn_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送low重要性的通知"
+                android:onClick="onClick"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/high_pri_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送high优先级的通知"
+                android:onClick="onClick"/>
+
+            <Button
+                android:id="@+id/default_pri_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送default优先级的通知"
+                android:onClick="onClick"/>
+
+            <Button
+                android:id="@+id/low_pri_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送low优先级的通知"
+                android:onClick="onClick"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/early_one_hour_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送早于测试时间1个小时的通知"
+                android:onClick="onClick"/>
+
+            <Button
+                android:id="@+id/late_one_hour_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送晚于测试时间1个小时的通知"
+                android:onClick="onClick"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

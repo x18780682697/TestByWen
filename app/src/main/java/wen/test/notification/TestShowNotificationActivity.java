@@ -52,17 +52,26 @@ public class TestShowNotificationActivity extends BaseActivity {
             builder = new Notification.Builder(context);
         }
 
-        RemoteViews view = new RemoteViews(getPackageName(), R.layout.activity_notification_custom);
-        builder.setContent(view);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            builder.setColorized(true);
+//            builder.setColor(getResources().getColor(android.R.color.transparent));
+        }
 
-//        builder.setContentTitle("test notification title");
-//                builder.setContentText(content);
+//        RemoteViews view = new RemoteViews(getPackageName(), R.layout.activity_notification_custom);
+//        builder.setContent(view);
+
+        builder.setContentTitle("test notification title");
+                builder.setContentText(content);
 
         builder.setSmallIcon(R.mipmap.ic_launcher)
                 .setPriority(Notification.PRIORITY_MAX)
                 .setWhen(System.currentTimeMillis());
+
+        Notification notification = builder.build();
+        notification.flags |= Notification.FLAG_FOREGROUND_SERVICE;
+
         try {
-            manager.notify(id, null);
+            manager.notify(id, notification);
         }catch (Exception e){
             e.printStackTrace();
         }
