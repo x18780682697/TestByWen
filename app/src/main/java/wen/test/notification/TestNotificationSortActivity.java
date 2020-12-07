@@ -95,19 +95,19 @@ public class TestNotificationSortActivity extends BaseActivity implements View.O
             break;
             case R.id.sound_notification:{
                 builder = NotificationUtils.getBuilder(NotificationUtils.CHANNEL_LOW);
-                builder.setContentText("设置flag为有声");
+                builder.setContentText("设置defaults为有声");
                 Notification notification = builder.build();
-                notification.flags |= Notification.DEFAULT_SOUND;
-                notification.flags |= Notification.DEFAULT_VIBRATE;
+                notification.defaults |= Notification.DEFAULT_SOUND;
+                notification.defaults |= Notification.DEFAULT_VIBRATE;
                 showNotification(viewId, notification);
             }
             break;
             case R.id.silent_notification:{
                 builder = NotificationUtils.getBuilder(NotificationUtils.CHANNEL_LOW);
-                builder.setContentText("设置flag为无声");
+                builder.setContentText("设置defaults为无声");
                 Notification notification = builder.build();
-                notification.flags &= ~Notification.DEFAULT_SOUND;
-                notification.flags &= ~Notification.DEFAULT_VIBRATE;
+                notification.defaults &= ~Notification.DEFAULT_SOUND;
+                notification.defaults &= ~Notification.DEFAULT_VIBRATE;
                 showNotification(viewId, notification);
             }
             break;

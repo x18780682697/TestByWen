@@ -112,14 +112,14 @@
                 android:id="@+id/sound_notification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="设置flag为有声"
+                android:text="设置defaults为有声"
                 android:onClick="onClick"/>
 
             <Button
                 android:id="@+id/silent_notification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="设置flag为无声"
+                android:text="设置defaults为无声"
                 android:onClick="onClick"/>
 
         </LinearLayout>
