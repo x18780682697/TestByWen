@@ -28,6 +28,10 @@ public class TestNotificationSortActivity extends BaseActivity implements View.O
                 showNotification(viewId, builder.build());
             }
             break;
+            case R.id.cancel_all_notification:{
+                NotificationUtils.getManager().cancelAll();
+            }
+            break;
             case R.id.important_colorized_notification:{
                 builder = NotificationUtils.getBuilder(NotificationUtils.CHANNEL_DEFAULT);
                 builder.setContentText("colorized");
@@ -86,6 +90,24 @@ public class TestNotificationSortActivity extends BaseActivity implements View.O
                 builder.setWhen(FIXED_TIME);
                 builder.setPriority(Notification.PRIORITY_LOW);
                 Notification notification = builder.build();
+                showNotification(viewId, notification);
+            }
+            break;
+            case R.id.sound_notification:{
+                builder = NotificationUtils.getBuilder(NotificationUtils.CHANNEL_LOW);
+                builder.setContentText("设置flag为有声");
+                Notification notification = builder.build();
+                notification.flags |= Notification.DEFAULT_SOUND;
+                notification.flags |= Notification.DEFAULT_VIBRATE;
+                showNotification(viewId, notification);
+            }
+            break;
+            case R.id.silent_notification:{
+                builder = NotificationUtils.getBuilder(NotificationUtils.CHANNEL_LOW);
+                builder.setContentText("设置flag为无声");
+                Notification notification = builder.build();
+                notification.flags &= ~Notification.DEFAULT_SOUND;
+                notification.flags &= ~Notification.DEFAULT_VIBRATE;
                 showNotification(viewId, notification);
             }
             break;
