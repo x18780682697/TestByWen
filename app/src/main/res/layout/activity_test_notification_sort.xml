@@ -146,6 +146,48 @@
 
         </LinearLayout>
 
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用setSortKey进行内部排序"/>
+
+            <Button
+                android:id="@+id/sort_key_a_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sort key为a"
+                android:onClick="onClick"/>
+
+            <Button
+                android:id="@+id/sort_key_b_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sort key为b"
+                android:onClick="onClick"/>
+
+            <Button
+                android:id="@+id/sort_key_b_high_channel_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sort key为b，但优先级为高"
+                android:onClick="onClick"/>
+
+            <Button
+                android:id="@+id/sort_key_c_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sort key为c"
+                android:onClick="onClick"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>

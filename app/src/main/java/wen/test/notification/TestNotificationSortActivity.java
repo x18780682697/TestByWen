@@ -125,6 +125,35 @@ public class TestNotificationSortActivity extends BaseActivity implements View.O
                 showNotification(viewId, notification);
             }
             break;
+            case R.id.sort_key_a_notification:{
+                builder.setContentText("sort key为a");
+                builder.setSortKey("a");
+                Notification notification = builder.build();
+                showNotification(viewId, notification);
+            }
+            break;
+            case R.id.sort_key_b_notification:{
+                builder.setContentText("sort key为b");
+                builder.setSortKey("b");
+                Notification notification = builder.build();
+                showNotification(viewId, notification);
+            }
+            break;
+            case R.id.sort_key_b_high_channel_notification:{
+                builder = NotificationUtils.getBuilder(NotificationUtils.CHANNEL_HIGH);
+                builder.setContentText("sort key为b，优先级为高");
+                builder.setSortKey("b");
+                Notification notification = builder.build();
+                showNotification(viewId, notification);
+            }
+            break;
+            case R.id.sort_key_c_notification:{
+                builder.setContentText("sort key为c");
+                builder.setSortKey("c");
+                Notification notification = builder.build();
+                showNotification(viewId, notification);
+            }
+            break;
             default:break;
         }
     }
