@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name="wen.test.notification.TestNotificationSortActivity"></activity>
+        <activity android:name="wen.test.textuse.ShowHtmlInTextViewActivity"></activity>
+        <activity android:name="wen.test.notification.TestNotificationSortActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

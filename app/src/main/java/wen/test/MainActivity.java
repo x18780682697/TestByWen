@@ -27,6 +27,7 @@ import wen.test.statusbar.TestStatusBarActivity;
 import wen.test.gituse.TestGitBranchActivity;
 import wen.test.statusbar.TransparentStatusAndNavigationBarActivity;
 import wen.test.textuse.CutTextIntoOneLineActivity;
+import wen.test.textuse.ShowHtmlInTextViewActivity;
 import wen.testbywen.R;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
@@ -108,6 +109,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(v.getContext(), TestDynamicLoadDexActivity.class));
+            }
+        });
+
+        findViewById(R.id.btn_test_show_html).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), ShowHtmlInTextViewActivity.class));
             }
         });
 
