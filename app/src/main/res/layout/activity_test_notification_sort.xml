@@ -158,6 +158,11 @@
                 android:layout_height="wrap_content"
                 android:text="使用setSortKey进行内部排序"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="验证发现如果分组不同则不生效"/>
+
             <Button
                 android:id="@+id/sort_key_a_notification"
                 android:layout_width="wrap_content"
