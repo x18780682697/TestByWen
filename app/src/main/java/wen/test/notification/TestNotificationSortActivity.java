@@ -1,6 +1,7 @@
 package wen.test.notification;
 
 import android.app.Notification;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -25,11 +26,14 @@ public class TestNotificationSortActivity extends BaseActivity implements View.O
         switch (viewId){
             case R.id.default_notification:{
                 builder.setContentText("default");
-                showNotification(viewId, builder.build());
+                Notification notification = builder.build();
+                notification.flags &= ~Notification.FLAG_FOREGROUND_SERVICE;
+                showNotification(111, notification);
             }
             break;
             case R.id.cancel_all_notification:{
-                NotificationUtils.getManager().cancelAll();
+//                NotificationUtils.getManager().canc.cancel(111);
+                startService(new Intent(getApplicationContext(), CancelImprovedSortNotificationService.class));
             }
             break;
             case R.id.important_colorized_notification:{
@@ -39,7 +43,7 @@ public class TestNotificationSortActivity extends BaseActivity implements View.O
                 builder.setColor(getColor(android.R.color.holo_red_dark));
                 Notification notification = builder.build();
                 notification.flags |= Notification.FLAG_FOREGROUND_SERVICE;
-                showNotification(viewId, notification);
+                showNotification(111, notification);
             }
             break;
             case R.id.high_chn_notification:{
