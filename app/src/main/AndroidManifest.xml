@@ -2,12 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="wen.testbywen">
-
     <!-- 修改壁纸权限 -->
     <uses-permission android:name="android.permission.SET_WALLPAPER" /> <!-- 读写外置存储 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 安装APK权限 -->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:name="wen.test.common.MyApp"
@@ -18,10 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
+        <activity android:name="wen.test.progressbar.TestProgressBarActivity"></activity>
+
         <service
             android:name="wen.test.notification.CancelImprovedSortNotificationService"
             android:enabled="false"
-            android:exported="false"></service>
+            android:exported="false" />
 
         <activity android:name="wen.test.textuse.ShowHtmlInTextViewActivity" />
         <activity android:name="wen.test.notification.TestNotificationSortActivity" />
