@@ -11,6 +11,7 @@ import wen.test.animation.TestLaunchAnimActivity;
 import wen.test.animation.TestLaunchAnim2Activity;
 import wen.test.animation.TestLottieAnimActivity;
 import wen.test.apkinstall.TestInstallApkActivity;
+import wen.test.broadcast.TestReceiveBroadcastActivity;
 import wen.test.coloruse.TestAndroidColorClassActivity;
 import wen.test.drawable.TestLimitDrawableAreaActivity;
 import wen.test.javaio.TestJavaIoActivity;
@@ -36,6 +37,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.btn_test_receive_broadcast).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), TestReceiveBroadcastActivity.class));
+            }
+        });
 
         findViewById(R.id.btn_test_progress_bar).setOnClickListener(new View.OnClickListener() {
             @Override

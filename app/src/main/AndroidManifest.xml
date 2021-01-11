@@ -2,11 +2,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="wen.testbywen">
+
     <!-- 修改壁纸权限 -->
-    <uses-permission android:name="android.permission.SET_WALLPAPER" /> <!-- 读写外置存储 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 安装APK权限 -->
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <!-- 读写外置存储 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 安装APK权限 -->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!-- 开机自启权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- 用于监听APK安装卸载广播 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+
+    <!-- 网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:name="wen.test.common.MyApp"
@@ -17,7 +30,34 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name="wen.test.progressbar.TestProgressBarActivity"></activity>
+
+        <receiver
+            android:name="wen.test.broadcast.StaticRegisterReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <!--应用安装卸载-->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package"/>
+            </intent-filter>
+            <!--用户解锁事件-->
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <!--网络连接变化-->
+            <intent-filter>
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+            <!--充电与断开-->
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="wen.test.broadcast.TestReceiveBroadcastActivity" />
+        <activity android:name="wen.test.progressbar.TestProgressBarActivity" />
 
         <service
             android:name="wen.test.notification.CancelImprovedSortNotificationService"
