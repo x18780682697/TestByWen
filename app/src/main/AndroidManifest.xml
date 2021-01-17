@@ -103,37 +103,37 @@
                 <data android:mimeType="*/*" />
             </intent-filter>
         </activity> <!-- APK三方打开 -->
-        <activity-alias
-            android:name="com.test.thirdcall.TestApkInstallActivity"
-            android:label="apk installer"
-            android:targetActivity="wen.test.thirdcall.TestThirdCallActivity">
+<!--        <activity-alias-->
+<!--            android:name="com.test.thirdcall.TestApkInstallActivity"-->
+<!--            android:label="apk installer"-->
+<!--            android:targetActivity="wen.test.thirdcall.TestThirdCallActivity">-->
 
-            <!-- 按照MIME过滤 -->
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+<!--            &lt;!&ndash; 按照MIME过滤 &ndash;&gt;-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
 
-                <data android:scheme="file" />
-                <data android:scheme="content" />
-                <data android:host="*" />
-                <data android:mimeType="application/vnd.android.package-archive" />
-            </intent-filter>
-            <!-- 按照后缀名过滤 -->
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+<!--                <data android:scheme="file" />-->
+<!--                <data android:scheme="content" />-->
+<!--                <data android:host="*" />-->
+<!--                <data android:mimeType="application/vnd.android.package-archive" />-->
+<!--            </intent-filter>-->
+<!--            &lt;!&ndash; 按照后缀名过滤 &ndash;&gt;-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
 
-                <data android:scheme="file" />
-                <data android:scheme="content" />
-                <data android:host="*" />
-                <data android:mimeType="*/*" />
-                <data android:pathPattern=".*\\.apk" />
-            </intent-filter>
-        </activity-alias>
+<!--                <data android:scheme="file" />-->
+<!--                <data android:scheme="content" />-->
+<!--                <data android:host="*" />-->
+<!--                <data android:mimeType="*/*" />-->
+<!--                <data android:pathPattern=".*\\.apk" />-->
+<!--            </intent-filter>-->
+<!--        </activity-alias>-->
 
         <activity android:name="wen.test.drawable.TestLimitDrawableAreaActivity" />
         <activity android:name="wen.test.javaio.TestJavaIoActivity" />
