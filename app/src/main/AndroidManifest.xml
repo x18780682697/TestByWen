@@ -4,21 +4,13 @@
     package="wen.testbywen">
 
     <!-- 修改壁纸权限 -->
-    <uses-permission android:name="android.permission.SET_WALLPAPER" />
-    <!-- 读写外置存储 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!-- 安装APK权限 -->
+    <uses-permission android:name="android.permission.SET_WALLPAPER" /> <!-- 读写外置存储 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 安装APK权限 -->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-
-    <!-- 开机自启权限 -->
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
-    <!-- 用于监听APK安装卸载广播 -->
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
-
-    <!-- 网络状态 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 开机自启权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- 用于监听APK安装卸载广播 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
@@ -30,26 +22,35 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-
+        <receiver
+            android:name="wen.test.notification.delete.NotificationDeleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.test.notification.delete"/>
+            </intent-filter>
+        </receiver>
         <receiver
             android:name="wen.test.broadcast.StaticRegisterReceiver"
             android:enabled="true"
             android:exported="true">
-            <!--应用安装卸载-->
+
+            <!-- 应用安装卸载 -->
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
                 <action android:name="android.intent.action.PACKAGE_REMOVED" />
-                <data android:scheme="package"/>
+
+                <data android:scheme="package" />
             </intent-filter>
-            <!--用户解锁事件-->
+            <!-- 用户解锁事件 -->
             <intent-filter>
                 <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
-            <!--网络连接变化-->
+            <!-- 网络连接变化 -->
             <intent-filter>
                 <action android:name="android.net.wifi.STATE_CHANGE" />
             </intent-filter>
-            <!--充电与断开-->
+            <!-- 充电与断开 -->
             <intent-filter>
                 <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
                 <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
@@ -103,38 +104,32 @@
                 <data android:mimeType="*/*" />
             </intent-filter>
         </activity> <!-- APK三方打开 -->
-<!--        <activity-alias-->
-<!--            android:name="com.test.thirdcall.TestApkInstallActivity"-->
-<!--            android:label="apk installer"-->
-<!--            android:targetActivity="wen.test.thirdcall.TestThirdCallActivity">-->
-
-<!--            &lt;!&ndash; 按照MIME过滤 &ndash;&gt;-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.VIEW" />-->
-
-<!--                <category android:name="android.intent.category.DEFAULT" />-->
-<!--                <category android:name="android.intent.category.BROWSABLE" />-->
-
-<!--                <data android:scheme="file" />-->
-<!--                <data android:scheme="content" />-->
-<!--                <data android:host="*" />-->
-<!--                <data android:mimeType="application/vnd.android.package-archive" />-->
-<!--            </intent-filter>-->
-<!--            &lt;!&ndash; 按照后缀名过滤 &ndash;&gt;-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.VIEW" />-->
-
-<!--                <category android:name="android.intent.category.DEFAULT" />-->
-<!--                <category android:name="android.intent.category.BROWSABLE" />-->
-
-<!--                <data android:scheme="file" />-->
-<!--                <data android:scheme="content" />-->
-<!--                <data android:host="*" />-->
-<!--                <data android:mimeType="*/*" />-->
-<!--                <data android:pathPattern=".*\\.apk" />-->
-<!--            </intent-filter>-->
-<!--        </activity-alias>-->
-
+        <!-- <activity-alias -->
+        <!-- android:name="com.test.thirdcall.TestApkInstallActivity" -->
+        <!-- android:label="apk installer" -->
+        <!-- android:targetActivity="wen.test.thirdcall.TestThirdCallActivity"> -->
+        <!-- &lt;!&ndash; 按照MIME过滤 &ndash;&gt; -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.VIEW" /> -->
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
+        <!-- <data android:scheme="file" /> -->
+        <!-- <data android:scheme="content" /> -->
+        <!-- <data android:host="*" /> -->
+        <!-- <data android:mimeType="application/vnd.android.package-archive" /> -->
+        <!-- </intent-filter> -->
+        <!-- &lt;!&ndash; 按照后缀名过滤 &ndash;&gt; -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.VIEW" /> -->
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
+        <!-- <data android:scheme="file" /> -->
+        <!-- <data android:scheme="content" /> -->
+        <!-- <data android:host="*" /> -->
+        <!-- <data android:mimeType="*/*" /> -->
+        <!-- <data android:pathPattern=".*\\.apk" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity-alias> -->
         <activity android:name="wen.test.drawable.TestLimitDrawableAreaActivity" />
         <activity android:name="wen.test.javaio.TestJavaIoActivity" />
         <activity android:name="wen.test.animation.TestLottieAnimActivity" />
